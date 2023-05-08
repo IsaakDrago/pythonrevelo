@@ -99,7 +99,7 @@ else:
 
 if impar1>impar2:
     print(f"La lista 1 tiene mas impares con {impar1}")
-elif par1==par2:
+elif impar1==impar2:
     print(f"Ambas listas tienen la misma cantidad de impares con {impar1}")
 else:
     print(f"La lista 2 tiene mas impares con {impar2}")
