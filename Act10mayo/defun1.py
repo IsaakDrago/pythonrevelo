@@ -31,14 +31,39 @@ def menorL(lista):
 
 def ordenasc(lista):
     aux=0
-    for i in range():
-        for j in range(i+1,tam):
+    for i in range(len(lista)):
+        for j in range(i+1,len(lista)):
             if lista[i]>lista[j]:
                 aux=lista[i]
                 lista[i]=lista[j]
                 lista[j]=aux
-    return lista[aux]
+    return lista
     
+def ordendes(lista):
+    aux=0
+    for i in range(len(lista)):
+        for j in range(i+1,len(lista)):
+            if lista[i]<lista[j]:
+                aux=lista[i]
+                lista[i]=lista[j]
+                lista[j]=aux
+    return lista
+    
+# def modaL(lista):
+#     moda=0
+#     for i in lista:
+#         if len(lista)==i:
+#             moda=i 
+#     return lista
+    
+
+def medL(lista):
+    m=(len(lista))
+    if m%2==0:
+        mediana=(lista[m//2-1]+lista[m//2])/2
+    else:
+        mediana=lista[m//2]
+    return mediana
     
 l1=llenarL(5,20)
 print(l1)
@@ -47,3 +72,6 @@ print(promedioL(l1))
 print(mayorL(l1))
 print(menorL(l1))
 print(ordenasc(l1))
+print(ordendes(l1))
+#print(modaL(l1))
+print(medL(l1))
