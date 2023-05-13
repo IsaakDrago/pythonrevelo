@@ -50,12 +50,23 @@ def ordendes(lista):
     return lista
     
 # def modaL(lista):
-#     moda=0
-#     for i in lista:
-#         if len(lista)==i:
-#             moda=i 
-#     return lista
-    
+#       moda=0
+#       for i in lista:
+#          if len(lista)==i:
+#              moda=i 
+#       return lista
+def modaL(lista):
+    frecuencias = {}
+    moda = None
+    max_frecuencia = 0
+
+    for i in lista:
+        frecuencias[i] = frecuencias.get(i, 0) + 1
+        if frecuencias[i] > max_frecuencia:
+            moda = i
+            max_frecuencia = frecuencias[i]
+
+    return moda
 
 def medL(lista):
     m=(len(lista))
@@ -73,5 +84,5 @@ print(mayorL(l1))
 print(menorL(l1))
 print(ordenasc(l1))
 print(ordendes(l1))
-#print(modaL(l1))
+print(modaL(l1))
 print(medL(l1))
