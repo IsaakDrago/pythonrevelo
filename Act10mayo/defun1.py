@@ -75,7 +75,8 @@ def medL(lista):
     else:
         mediana=lista[m//2]
     return mediana
-    
+
+
 l1=llenarL(5,20)
 print(l1)
 print(sumaL(l1))
@@ -86,3 +87,22 @@ print(ordenasc(l1))
 print(ordendes(l1))
 print(modaL(l1))
 print(medL(l1))
+
+cont=0
+num=int(input("Ingrese un numero de 0 a 9: "))
+while num not in l1:
+        print(f"El numero {num} no esta en la lista")
+        num=int(input("Ingrese un nuevo numero: "))
+for i in range(len(l1)):
+    if num==l1[i]:
+        break
+print(f"El numero {num} si esta en la lista")
+
+for i in l1:
+     if i==num:
+         cont+=1
+print(f"El numero se repite {cont} veces")
+
+for i in range(len(l1)):
+     if num == l1[i]:
+        print(f'{l1[i]} esta en la posicion {i}')
