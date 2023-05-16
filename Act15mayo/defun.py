@@ -1,8 +1,3 @@
-# Llenar dos arreglos de n elementos con números generados con la función random.
-# Compararlos y decir:
-# a. Cuál de los dos tiene la suma más alta
-# b. Cuál de los dos tiene el número mayor
-# c. Cuál de los dos tiene el número menor
 # d. Cuál es el promedio conjunto (uniendo los dos arreglos)
 # e. Sacar el promedio de cada uno y decir si está por encima o por debajo del arreglo
 # conjunto
