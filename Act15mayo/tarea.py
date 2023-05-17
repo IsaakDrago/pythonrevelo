@@ -13,7 +13,7 @@ def llenarL(rangoi,rangof,tami,tamf):
     lista=[]
     lista=[random.randrange(rangoi,rangof) for i in range (random.randrange(tami,tamf))]
     return lista
-l1=llenarL(100,501,200,2500)
+l1=llenarL(10,50,20,25)
 
 def ordenasc(lista):
     aux=0
@@ -37,70 +37,44 @@ def cuartil(lista):
     q2=orde[c2]
     q3=orde[c3]
     return q1,q2,q3
+c1,c2,c3
 cuartil1, cuartil2, cuartil3 = cuartil(l1)
+print(cuartil1)
+# print(type(cuartil1))
+print(f"El tamaño de la lista es {len(l1)}")
+print("Los cuartiles son: ")
 print("Q1:", cuartil1)
 print("Q2:", cuartil2)
 print("Q3:", cuartil3)
 
-# tam=random.randint(200,2500)
-# lista=[random.randrange(100,500) for i in range(tam)]
-# a=len(lista)
-# def ordenarLista(lista):
-#     for a in range (tam-1):
-#         for b in range(a+1,tam):
-#             if lista[a]>lista[b]:
-#                 lista[a],lista[b]=lista[b],lista[a]
-#     return lista
-c=(int(input('ingrese un numero: ')))    
-cuartiLista=((len(l1)+1)/4)*(c)
-print(f'tamañoLista: {len(l1)}')
-print(ordenasc(l1))
-print(f'x: {round(cuartiLista,2)}')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# def sumaL(lista):
+#     sum=0
+#     for x in lista:
+#         sum+=x
+#     return sum
+# num=0
+# for i in range(len(l1)):
+#     if num == l1[i]:
+#         print(f'{l1[i]} esta en la posicion {i}')
+        
+# r1=l1[:cuartil1]
+# print(r1)
 #QUINTILES
-# def quintil(lista):
-#     orde=ordenasc(lista)
-#     n=len(orde)
-#     c1=int(n*0.2)
-#     c2=int(n*0.4)
-#     c3=int(n*0.6)
-#     c4=int(n*0.8)
-#     k1=orde[c1]
-#     k2=orde[c2]
-#     k3=orde[c3]
-#     k4=orde[c4]
-#     return k1,k2,k3,k4
-# quintil1, quintil2, quintil3, quintil4 = quintil(l1)
-# print("K1:", quintil1)
-# print("K2:", quintil2)
-# print("K3:", quintil3)
-# print("K4:", quintil4)
+def quintil(lista):
+     orde=ordenasc(lista)
+     n=len(orde)
+     c1=int(n*0.2)
+     c2=int(n*0.4)
+     c3=int(n*0.6)
+     c4=int(n*0.8)
+     k1=orde[c1]
+     k2=orde[c2]
+     k3=orde[c3]
+     k4=orde[c4]
+     return k1,k2,k3,k4
+quintil1, quintil2, quintil3, quintil4 = quintil(l1)
+print("Los quintiles son: ")
+print("K1:", quintil1)
+print("K2:", quintil2)
+print("K3:", quintil3)
+print("K4:", quintil4)
