@@ -9,11 +9,12 @@
 
 import random
 
-def llenarL(tam,rango):
+def llenarL(rangoi,rangof,tami,tamf):
     lista=[]
-    lista=[random.randrange(rango) for i in range(tam)]
+    lista=[random.randrange(rangoi,rangof) for i in range (random.randrange(tami,tamf))]
     return lista
-l1=llenarL(200,500)
+l1=llenarL(100,501,200,2500)
+
 def ordenasc(lista):
     aux=0
     for i in range(len(lista)):
