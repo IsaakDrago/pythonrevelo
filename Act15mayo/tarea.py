@@ -42,6 +42,50 @@ print("Q1:", cuartil1)
 print("Q2:", cuartil2)
 print("Q3:", cuartil3)
 
+# tam=random.randint(200,2500)
+# lista=[random.randrange(100,500) for i in range(tam)]
+# a=len(lista)
+# def ordenarLista(lista):
+#     for a in range (tam-1):
+#         for b in range(a+1,tam):
+#             if lista[a]>lista[b]:
+#                 lista[a],lista[b]=lista[b],lista[a]
+#     return lista
+c=(int(input('ingrese un numero: ')))    
+cuartiLista=((len(l1)+1)/4)*(c)
+print(f'tamañoLista: {len(l1)}')
+print(ordenasc(l1))
+print(f'x: {round(cuartiLista,2)}')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #QUINTILES
 # def quintil(lista):
 #     orde=ordenasc(lista)

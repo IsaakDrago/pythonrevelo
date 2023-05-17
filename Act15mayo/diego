@@ -1,0 +1,15 @@
+import random
+tam=random.randint(200,2500)
+lista=[random.randrange(100,500) for i in range(tam)]
+a=len(lista)
+def ordenarLista(lista):
+    for a in range (tam-1):
+        for b in range(a+1,tam):
+            if lista[a]>lista[b]:
+                lista[a],lista[b]=lista[b],lista[a]
+    return lista
+c=(int(input('ingrese un numero: ')))    
+quintilLista=((a+1)/5)*(c)
+print(f'tamañoLista: {a}')
+print(ordenarLista(lista))
+print(f'x: {round(quintilLista,2)}')
