@@ -2,11 +2,20 @@
 #Escriba funciones que permitan alimentar estos diccionarios y usarlos. Genere un menú para cada una de las 4 opciones.
 # Alimentar cada diccionario (2 funciones)
 # Usar cada diccionario (2 funciones)
-
+dicesping={
+    "perro": "dog",
+    "gato": "cat",
+    "ratón": "mouse"
+    }
+dicingesp={
+    "dog": "perro",
+    "cat": "gato",
+    "mouse": "raton"
+    }
 def espanoling(diccionario):
     palabra=input("Ingrese el animal en español: ")
     traduc=input("Ingrese la traduccion de el animal en ingles: ")
-    diccionario[palabra]=traduc
+    diccionario.update({palabra: traduc})
     return diccionario
 
 def inglesesp(diccionario):
@@ -34,14 +43,11 @@ def traduciraespanol(diccionario):
     else:
         print(f"No se encontró una traducción para '{animaling}'.")
 
-dicesping={}
-dicingesp={}
-
 print('1-Alimentar diccionario español-ingles')
 print('2-Alimentar diccionario ingles-español')
 print('3-Consultar diccionario español-ingles')
 print('4-Consultar diccionario ingles-español')
-op=int(input('¿Que quiere hacer?'))
+op=int(input('¿Que quiere hacer? '))
 match op:
     case 1:
         dicesping=espanoling(dicesping)
@@ -54,4 +60,8 @@ match op:
     case 4:
         traduciraespanol(dicingesp)
 
+# 3. Codifique funciones para alamacenar en tuplas de cada diccionario todos los animales
+# en español y en ingles respectivamente. 
 
+def almesp():
+    tupla=espanol
