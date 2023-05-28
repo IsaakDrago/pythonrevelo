@@ -63,5 +63,16 @@ match op:
 # 3. Codifique funciones para alamacenar en tuplas de cada diccionario todos los animales
 # en español y en ingles respectivamente. 
 
-def almesp():
-    tupla=espanol
+def animalesespanol(diccionario):
+    animalesesp=diccionario.keys()
+    return animalesesp
+
+def animalesingles(diccionario):
+    animalesing=diccionario.keys()
+    return animalesing
+
+animalese=animalesespanol(dicesping)
+animalesi=animalesingles(dicingesp)
+
+print(f"Animales en español son: {animalese}")
+print(f"Animales en inglés son: {animalesi}")
