@@ -32,7 +32,7 @@ print(f"El numero menor es {menor}")
 moda=0
 for i in lista:
     if tam==i:
-       moda=i 
+        moda=i 
 print(f"La moda es {moda}")
 
 #MEDIANA

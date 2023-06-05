@@ -89,7 +89,7 @@ print(modaL(l1))
 print(medL(l1))
 
 cont=0
-num=int(input("Ingrese un numero de 0 a 9: "))
+num=int(input("Ingrese un numero: "))
 while num not in l1:
         print(f"El numero {num} no esta en la lista")
         num=int(input("Ingrese un nuevo numero: "))
