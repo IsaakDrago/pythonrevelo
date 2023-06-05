@@ -20,31 +20,33 @@ class Persona :
         return f"{self.__nombre}, {self.__documento}"
     
     def getcurso(self):
-        self.__curso=[]
+        return self.__curso
     
-    def setcurso(self,curs):
-        self.__curso.append(curs)
+    def setcurso(self,curso):
+        self.__curso.append(curso)
         
-curs=int(input("Escriba el curso"))
+    def elimcurso(self,curso):
+        self.__curso.remove(curso)
 
-# p=Persona ("Ana",123)
-# print(p.getnombre())
-# print(p.getdocumento())
-# p.setnombre("Maria")
-# p.setdocumento(455)
-# print(p.getnombre())
-# print(p.getdocumento())
-# q=Persona ("Pedro",321)
-# print(q.getnombre())
-# print(q.getdocumento())
-# q.setnombre("Martin")
-# q.setdocumento(901)
-# print(q.getnombre())
-# print(q.getdocumento())
+    def busccurso(self,curso):
+        if curso in self.__curso:
+            return (f"Si tiene el curso de {curso}")
+        else:
+            print(f"No tiene el curso de {curso}")
+    
+    def modificarcurso(self,curso):
+        self.__curso
 
 k=Persona("Lukas", 145)
 print(k.getambos())
+#print(k.getcurso())
+k.setcurso("Matematicas")
+k.setcurso("Ingles")
+k.setcurso("Ciencias")
+k.setcurso("Etica")
 print(k.getcurso())
-k.setcurso()
+k.elimcurso("Matematicas")
+k.elimcurso("Etica")
 print(k.getcurso())
-
+print(k.busccurso("Ingles"))
+print(k.busccurso("Sociales"))
