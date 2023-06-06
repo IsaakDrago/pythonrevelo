@@ -22,7 +22,7 @@ class Persona :
     def getcurso(self):
         self.__curso=[]
     
-    def setcurso(self,curs):
+    def setcurso(self):
         self.__curso.append(curs)
         
 curs=int(input("Escriba el curso"))
