@@ -21,14 +21,12 @@ class Persona :
     
     def getcurso(self):
         return self.__curso
-    
-<<<<<<< HEAD:Act2Junio/Persona.py
+
     def setcurso(self):
-        self.__curso.append(curs)
-=======
+        self.__curso.append(curso)
+
     def setcurso(self,curso):
         self.__curso.append(curso)
->>>>>>> 9cbba72ca85baca13fa429ffa06a6f3b8869bcc7:Evaluacion/Persona.py
         
     def elimcurso(self,curso):
         self.__curso.remove(curso)
