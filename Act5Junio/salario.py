@@ -82,7 +82,7 @@ salario_extra = e2.horextra()
 print(f"El salario extra por horas extras es de:", salario_extra)
 
 sumasalarios=Empleado.suma
-print(sumasalarios)
+print("La suma de los salarios es de:", sumasalarios)
 
 promsalarios=Empleado.promedio()
 print("El promedio de los salarios es:", promsalarios)

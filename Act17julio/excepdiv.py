@@ -1,6 +1,20 @@
 #Comparar validacion de un numero ingresado con while vs try-except 
-# en el caso de division por cer
+# en el caso de division por cero
 
+print("Con While sin Try-Except")
+while True:
+    n1=int(input("Ingrese un numero para divisor: "))
+    n2=int(input("Ingrese un numero para dividendo: "))
+    if n2 !=0:
+        r1=n1/n2
+        print(f"El resultado es: {r1}")
+        break
+    # elif n1 or n2 !=int:
+    #     print ("No se admiten letras")
+    else:
+        print("No se puede dividir entre cero")
+
+print("Con While y try-except")
 while True:
     try:
         x=int(input("Ingresa un numero para divisor: "))
