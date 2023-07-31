@@ -13,7 +13,7 @@ try: #Se inicia try para prevenir posibles errores
             # Si es una letra...
             if char.isalpha(): #Se verifica si es letra
                 # ... lo trataremos en minúsculas y actualizaremos el contador apropiado.
-                counters[char.lower()] += 1 #Si es letra se pasa a minuscula y se suma 1 al contador
+                counters[char.lower()] += 1 #Si es letra se pasa a minuscula y se suma 1 al contador.
             elif char.isdigit():
                 counters[char] += 1
             else:

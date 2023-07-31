@@ -1,4 +1,4 @@
 Hola, iniciando con el procesamiento de archivos
-números 12345 
+numeros 12345 
 caracteres especiales !@#$%^&*()
 
