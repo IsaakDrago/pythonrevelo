@@ -1,10 +1,27 @@
-class Aprendiz:
-    def __init__(self,nombre,apellido,correo,doc):
-        self.__nombre=nombre
-        self.__apellido=apellido
-        self.__correo=correo
-        self.__doc=doc
+class Persona:
+    def __init__(self, dptoreside, estrato, nomcolegio, puntlectura, puntmatematicas):
+        self.__dptoreside = dptoreside
+        self.__estrato = self.entero(estrato)
+        self.__nomcolegio = nomcolegio
+        self.__puntlect = self.entero(puntlectura)
+        self.__puntmat = self.entero(puntmatematicas)
+
+    def entero(self, valor):
+        try:
+            return int(valor)
+        except ValueError:
+            return 0
+
     def verDatos(self):
-        return f"{self.__nombre} {self.__apellido} {self.__correo} {self.__doc}"
-    def getNombre(self):
-        return self.__nombre
+        return f"Departamento Residencia: {self.__dptoreside}, Estrato: {self.__estrato}, Nombre Colegio: {self.__nomcolegio}, Puntaje Lectura Critica: {self.__puntlect}, Puntaje Matematica: {self.__puntmat}"
+
+    def getDpto(self):
+        return self.__dptoreside
+    def getEstrato(self):
+        return self.__estrato
+    def getColegio(self):
+        return self.__nomcolegio
+    def getPuntLectura(self):
+        return self.__puntlect
+    def getPuntMatematicas(self):
+        return self.__puntmat
