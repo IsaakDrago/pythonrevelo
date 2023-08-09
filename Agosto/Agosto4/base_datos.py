@@ -10,7 +10,16 @@ base=mysql.connector.connect(
 
 cursor=base.cursor()
 
+def descriptabla():
+    nombretabla = input("De qué tabla quieres su descripción?: ")
+    aux = f"DESCRIBE {nombretabla}"
+    cursor.execute(aux)
+    
+    for column_info in cursor:
+        print(column_info)
+
 insertarDatos(base,cursor)
+
 
 
 

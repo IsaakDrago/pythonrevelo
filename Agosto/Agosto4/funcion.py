@@ -11,36 +11,43 @@ def insertarDatos(nbase, ncursor):
     ncursor.execute(aux)
     nbase.commit()
 
-def consultaSelect(nbase,ncursor,nombretabla):
-    nombretabla=input("En que tabla quiere hacer la consulta?: ")
-    aux=f"SELECT * FROM {nombretabla}"
-    ncursor.execute(aux)
-    nbase.commit
+def consultaSelect(nbase, ncursor, nombretabla):
+    consulta = f"SELECT * FROM {nombretabla}"
+    ncursor.execute(consulta)
+    for fila in ncursor:
+        print(fila)
+    nbase.commit()
 
-def modifTabla(nbase,ncursor, nombretabla):
-    nombretabla=input("Que tabla?: ")
-    columna=input("Nombre de la columna: ")
-    tipo=input("Que tipo de dato va a ser?: ")
-    op=print ("Que quiere hacer?: ")
-    print ("1-Agregar una columna")
-    print ("2-Modificar una columna")
-    print ("3-Eliminar una columna")
-    match op:
-        case 1:
-            print ("Se ha agregado la nueva columna")
-            f"ALTER TABLE {nombretabla} ADD {columna} {tipo}"
-        case 2:
-            op=f"ALTER TABLE {nombretabla} MODIFY {columna} {tipo}"
-            print ("Se modifico con exito")
-        case 3:
-            op=f"ALTER TABLE {nombretabla} DROP {columna}"
-            print ("Se elimino la tabla")
+def modifTabla(nbase, ncursor, nombretabla):
+    columna = input("Nombre de la columna: ")
+    tipo = input("Que tipo de dato va a ser?: ")
+    
+    print("Que quiere hacer?: ")
+    print("1-Agregar una columna")
+    print("2-Modificar una columna")
+    print("3-Eliminar una columna")
+    op = int(input())
+    
     try:
-        ncursor.execute()
+        if op == 1:
+            consulta = f"ALTER TABLE {nombretabla} ADD {columna} {tipo}"
+            print("Se ha agregado la nueva columna")
+        elif op == 2:
+            consulta = f"ALTER TABLE {nombretabla} MODIFY {columna} {tipo}"
+            print("Se modifico con exito")
+        elif op == 3:
+            consulta = f"ALTER TABLE {nombretabla} DROP COLUMN {columna}"
+            print("Se elimino la columna")
+        else:
+            print("Opción no válida")
+            return
+        
+        ncursor.execute(consulta)
         nbase.commit()
+        print("Operación exitosa")
     except Exception as e:
         print("Error:", str(e))
     finally:
         ncursor.close()
         nbase.close()
-        
+
