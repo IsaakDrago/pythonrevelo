@@ -39,15 +39,14 @@ def modifTabla(nbase, ncursor, nombretabla):
             consulta = f"ALTER TABLE {nombretabla} DROP COLUMN {columna}"
             print("Se elimino la columna")
         else:
-            print("Opción no válida")
+            print("Opcion no valida")
             return
         
         ncursor.execute(consulta)
         nbase.commit()
-        print("Operación exitosa")
+        print("Operacion exitosa")
     except Exception as e:
         print("Error:", str(e))
     finally:
         ncursor.close()
         nbase.close()
-

@@ -15,8 +15,8 @@ def descriptabla():
     aux = f"DESCRIBE {nombretabla}"
     cursor.execute(aux)
     
-    for column_info in cursor:
-        print(column_info)
+    for columna in cursor:
+        print(columna)
 
 insertarDatos(base,cursor)
 
